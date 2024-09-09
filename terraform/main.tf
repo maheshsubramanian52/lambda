@@ -12,18 +12,18 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "bucket-for-terraform-state-ts-lambda"
+    bucket = "terraformmaheshkamakshi"
     key    = "my_lambda/terraform.tfstate"
-    region = "eu-central-1"
+    region = "us-east-1"
   }
 }
 
 provider "aws" {
-  region = "eu-central-1"
+  region = "us-east-1"
 }
 
 resource "aws_s3_bucket" "terraform_state" {
-  bucket = "bucket-for-terraform-state-ts-lambda"
+  bucket = "terraformmaheshkamakshi"
 
   # Prevent accidental deletion of this S3 bucket
   lifecycle {
